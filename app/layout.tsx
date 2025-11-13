@@ -18,6 +18,32 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+(function(w, d) {
+  try {
+      if (w._psp) return;
+      var q = function() {
+          q.q.push(arguments)
+      };
+      q.q = [];w._psp = q;var s = d.createElement("script");s.async = 1;s.src = "https://app.prospectory.ai/psp.tracker.prod.js";
+      var f = d.getElementsByTagName("script")[0];f.parentNode.insertBefore(s, f);
+      s.onload = function() {
+          try {
+              (w.tracking && w.tracking.load) && w.tracking.load({
+                  pspClientId: "cmecxlbwd002zoi25iwbauy09",
+                  pspUserId: "cme6szihy0000zxecsgw2wrvw"
+              })
+          } catch (e) {}
+      };
+  } catch (e) {}
+})(window, document);
+            `,
+          }}
+        />
+      </head>
       <body className={inter.className}>
         <Navigation />
         <main className="min-h-screen">
