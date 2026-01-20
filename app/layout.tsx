@@ -33,8 +33,8 @@ export default function RootLayout({
       s.onload = function() {
           try {
               (w.tracking && w.tracking.load) && w.tracking.load({
-                  pspClientId: "cmecxlbwd002zoi25iwbauy09",
-                  pspUserId: "cme6szihy0000zxecsgw2wrvw"
+                  pspClientId: "cmecxl9dm000xoi251u8685zc",
+                  pspUserId: "cm5ghgi3y005h11jxqa5x7sbo"
               })
           } catch (e) {}
       };
